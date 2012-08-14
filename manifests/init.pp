@@ -19,11 +19,12 @@
 
 class boundary ($id, $apikey) {
 
+  include boundary::params
+  require boundary::dependencies
+
   $collector      = $boundary::params::collector
   $collector_port = $boundary::params::collector_port
 
-  require boundary::params
-  require boundary::dependencies
 
   file { '/etc/bprobe/':
     ensure => directory,
