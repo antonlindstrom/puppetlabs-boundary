@@ -20,8 +20,6 @@
 
 class boundary::params {
 
-  $apikey         = 'apikey'
-  $id             = 'OrganisationID'
   $collector      = 'collector.boundary.com'
   $collector_port = 4740
 

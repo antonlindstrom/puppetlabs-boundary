@@ -17,15 +17,13 @@
 # limitations under the License.
 #
 
-class boundary {
+class boundary ($id, $apikey) {
+
+  $collector      = $boundary::params::collector
+  $collector_port = $boundary::params::collector_port
 
   require boundary::params
   require boundary::dependencies
-
-  $id             = $boundary::params::id
-  $apikey         = $boundary::params::apikey
-  $collector      = $boundary::params::collector
-  $collector_port = $boundary::params::collector_port
 
   file { '/etc/bprobe/':
     ensure => directory,
